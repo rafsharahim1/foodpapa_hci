@@ -1,6 +1,6 @@
 import { AccessibleBackButton } from './AccessibleBackButton';
 import { useTranslation } from '../hooks/useTranslation';
-import { useLanguage } from '../context/LanguageContext';
+import { useAccessibility } from '../context/AccessibilityContext';
 
 interface LanguageScreenProps {
   onBack: () => void;
@@ -8,18 +8,18 @@ interface LanguageScreenProps {
 
 export function LanguageScreen({ onBack }: LanguageScreenProps) {
   const { t } = useTranslation();
-  const { language, setLanguage } = useLanguage();
+  const { settings, updateSettings } = useAccessibility();
 
   const languages = [
     {
-      code: 'en' as const,
+      code: 'english' as const,
       name: 'English',
       nativeName: 'English',
       icon: '🇬🇧',
       description: 'Use English for all text and voice'
     },
     {
-      code: 'ur' as const,
+      code: 'urdu' as const,
       name: 'Urdu',
       nativeName: 'اردو',
       icon: '🇵🇰',
@@ -43,9 +43,9 @@ export function LanguageScreen({ onBack }: LanguageScreenProps) {
           {languages.map((lang) => (
             <button
               key={lang.code}
-              onClick={() => setLanguage(lang.code)}
+              onClick={() => updateSettings({ language: lang.code })}
               className={`w-full bg-white rounded-2xl p-6 shadow-sm transition-all flex items-center gap-4 border-2 ${
-                language === lang.code
+                settings.language === lang.code
                   ? 'border-purple-700 bg-purple-50'
                   : 'border-gray-200 hover:border-purple-300'
               }`}
@@ -59,7 +59,7 @@ export function LanguageScreen({ onBack }: LanguageScreenProps) {
                 <p className="text-gray-600">{lang.description}</p>
               </div>
 
-              {language === lang.code && (
+              {settings.language === lang.code && (
                 <div className="w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                   ✓
                 </div>
@@ -86,7 +86,7 @@ export function LanguageScreen({ onBack }: LanguageScreenProps) {
             <div>
               <p className="text-gray-900 text-xl mb-2">{t('voiceLanguage')}</p>
               <p className="text-gray-600 leading-relaxed">
-                {language === 'ur' 
+                {settings.language === 'urdu' 
                   ? 'آواز کی تلاش اور رہنمائی آپ کی منتخب شدہ زبان میں ہوگی'
                   : 'Voice search and guidance will be in your selected language'
                 }
