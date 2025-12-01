@@ -2414,7 +2414,7 @@ export const translations = {
   minutes: { en: 'minutes', ur: 'منٹ', urRoman: 'minute' },
   totalPaid: { en: 'Total Paid', ur: 'کل ادا کیا گیا', urRoman: 'Kul ada kiya gaya' },
   rewardsEarned: { en: 'Rewards Earned', ur: 'انعامات حاصل کیے', urRoman: 'Inaamaat hasil kiye' },
-  points: { en: 'points', ur: 'پوائنٹس', urRoman: 'points' },
+  pointsLabel: { en: 'points', ur: 'پوائنٹس', urRoman: 'points' },
   viewRewards: { en: 'View Rewards', ur: 'انعامات دیکھیں', urRoman: 'Inaamaat dekhen' },
   backToHome: { en: 'Back to Home', ur: 'گھر واپس جائیں', urRoman: 'Ghar wapas jayen' }
 };
