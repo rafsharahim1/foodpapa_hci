@@ -1,0 +1,695 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --focus-ring: #7c3aed;
+  --focus-ring-offset: #ffffff;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.175 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.175 0 0);
+  --muted-foreground: oklch(0.629 0 0);
+  --accent: oklch(0.175 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.35 0.22 18);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --input-background: oklch(0.195 0 0);
+  --switch-background: oklch(0.305 0 0);
+  --ring: oklch(0.449 0 0);
+  --focus-ring: #a78bfa;
+  --focus-ring-offset: #000000;
+  --chart-1: oklch(0.8 0.22 41.116);
+  --chart-2: oklch(0.75 0.118 184.704);
+  --chart-3: oklch(0.65 0.07 227.392);
+  --chart-4: oklch(0.85 0.189 84.429);
+  --chart-5: oklch(0.82 0.188 70.08);
+  --sidebar: oklch(0.145 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(0.145 0 0);
+  --sidebar-accent: oklch(0.175 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.205 0 0);
+  --sidebar-ring: oklch(0.449 0 0);
+}
+
+.high-contrast {
+  --background: #ffff00;
+  --foreground: #000000;
+  --card: #ffff00;
+  --card-foreground: #000000;
+  --popover: #ffff00;
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffff00;
+  --secondary: #0000ff;
+  --secondary-foreground: #ffff00;
+  --muted: #ffff00;
+  --muted-foreground: #000000;
+  --accent: #000000;
+  --accent-foreground: #ffff00;
+  --destructive: #ff0000;
+  --destructive-foreground: #ffffff;
+  --border: #000000;
+  --input: #ffff00;
+  --input-background: #ffff00;
+  --switch-background: #000000;
+  --ring: #0000ff;
+  --focus-ring: #0000ff;
+  --focus-ring-offset: #ffff00;
+  --chart-1: #ff0000;
+  --chart-2: #00ff00;
+  --chart-3: #0000ff;
+  --chart-4: #ff00ff;
+  --chart-5: #00ffff;
+}
+
+.high-contrast.dark {
+  --background: #000000;
+  --foreground: #ffff00;
+  --card: #000000;
+  --card-foreground: #ffff00;
+  --popover: #000000;
+  --popover-foreground: #ffff00;
+  --primary: #ffff00;
+  --primary-foreground: #000000;
+  --secondary: #0000ff;
+  --secondary-foreground: #ffff00;
+  --muted: #000000;
+  --muted-foreground: #ffff00;
+  --accent: #ffff00;
+  --accent-foreground: #000000;
+  --destructive: #ff0000;
+  --destructive-foreground: #ffffff;
+  --border: #ffff00;
+  --input: #000000;
+  --input-background: #000000;
+  --switch-background: #ffff00;
+  --ring: #0000ff;
+  --focus-ring: #0000ff;
+  --focus-ring-offset: #000000;
+  --chart-1: #ff0000;
+  --chart-2: #00ff00;
+  --chart-3: #00ffff;
+  --chart-4: #ff00ff;
+  --chart-5: #00ffff;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings:
+    'rlig' 1,
+    'calt' 1;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-medium);
+  }
+
+  p, span, div, a, button, input, textarea, select, label, li {
+    font-family: inherit;
+    font-weight: var(--font-weight-normal);
+  }
+
+  :is(h1, h2, h3, h4, h5, h6, p, span, a, button, li, td, th, label) {
+    @supports (font-size: 1lh) {
+      font-size: var(--text-base);
+      line-height: 1.5;
+    }
+  }
+  
+  @supports not (font-size: 1lh) {
+    :is(h1, h2, h3, h4, h5, h6, p, span, a, button, li, td, th, label) {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/**
+ * Screen Reader Only Utility
+ * Hides content visually but keeps it accessible to screen readers
+ */
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+/**
+ * Focus Indicators for Accessibility
+ * Ensures visible focus states for keyboard navigation and visually impaired users
+ * WCAG 2.1 Level AA - 2.4.7 Focus Visible
+ * 
+ * IMPORTANT: Enhanced focus indicators are ONLY enabled when:
+ * - User has enabled High Contrast Mode, OR
+ * - User has enabled Voice Guide
+ * This is controlled by the .accessibility-enhanced class on the root element
+ */
+@layer utilities {
+  /* Default focus styles - minimal for regular users */
+  *:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  /* ENHANCED FOCUS INDICATORS - Only for accessibility-enhanced mode */
+  .accessibility-enhanced *:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Buttons - Enhanced focus with ring and offset */
+  .accessibility-enhanced button:focus-visible,
+  .accessibility-enhanced [role="button"]:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--focus-ring-offset), 0 0 0 6px var(--focus-ring);
+  }
+
+  /* Links */
+  .accessibility-enhanced a:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 2px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+  }
+
+  /* Form inputs */
+  .accessibility-enhanced input:focus-visible,
+  .accessibility-enhanced textarea:focus-visible,
+  .accessibility-enhanced select:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-color: var(--focus-ring);
+    box-shadow: 0 0 0 2px var(--focus-ring-offset), 0 0 0 6px var(--focus-ring);
+  }
+
+  /* Checkboxes and Radio Buttons */
+  .accessibility-enhanced input[type="checkbox"]:focus-visible,
+  .accessibility-enhanced input[type="radio"]:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 4px;
+    box-shadow: 0 0 0 2px var(--focus-ring-offset), 0 0 0 6px var(--focus-ring);
+  }
+
+  /* Select dropdowns */
+  .accessibility-enhanced select:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--focus-ring-offset), 0 0 0 6px var(--focus-ring);
+  }
+
+  /* Cards and interactive containers */
+  .accessibility-enhanced [role="button"]:focus-visible,
+  .accessibility-enhanced [role="link"]:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--focus-ring-offset), 0 0 0 6px var(--focus-ring);
+  }
+
+  /* Tabs */
+  .accessibility-enhanced [role="tab"]:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 2px;
+    background: var(--accent);
+  }
+
+  /* Menu items */
+  .accessibility-enhanced [role="menuitem"]:focus-visible,
+  .accessibility-enhanced [role="menuitemcheckbox"]:focus-visible,
+  .accessibility-enhanced [role="menuitemradio"]:focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 2px;
+    background: var(--accent);
+  }
+}
+
+/**
+ * High-Contrast Mode Focus Enhancements
+ * Extra prominent focus indicators for high-contrast mode
+ */
+.high-contrast *:focus-visible {
+  outline: 5px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.high-contrast button:focus-visible,
+.high-contrast [role="button"]:focus-visible {
+  outline: 5px solid var(--focus-ring);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 3px var(--focus-ring-offset), 0 0 0 8px var(--focus-ring);
+}
+
+.high-contrast input:focus-visible,
+.high-contrast textarea:focus-visible,
+.high-contrast select:focus-visible {
+  outline: 5px solid var(--focus-ring);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--focus-ring-offset), 0 0 0 8px var(--focus-ring);
+}
+
+/**
+ * Dark Mode Focus Enhancements
+ * Only apply enhanced focus if accessibility-enhanced is also enabled
+ */
+.dark.accessibility-enhanced *:focus-visible {
+  outline-color: var(--focus-ring);
+  box-shadow: 0 0 0 2px var(--focus-ring-offset), 0 0 0 6px var(--focus-ring);
+}
+
+/**
+ * Prevent focus removal - Accessibility requirement
+ * Never use outline: none without providing alternative focus indication
+ */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/**
+ * Animation for focus - helps draw attention to focused element
+ * Only enabled in accessibility-enhanced mode
+ */
+@keyframes focus-pulse {
+  0%, 100% {
+    outline-width: 4px;
+  }
+  50% {
+    outline-width: 5px;
+  }
+}
+
+.accessibility-enhanced *:focus-visible {
+  animation: focus-pulse 1.5s ease-in-out;
+}
+
+/**
+ * Skip to main content link (for keyboard users)
+ * Only visible in accessibility-enhanced mode
+ */
+.accessibility-enhanced .skip-to-main:focus {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: var(--focus-ring);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  outline: 4px solid var(--focus-ring-offset);
+  outline-offset: 2px;
+}
+
+/* Hide skip link when accessibility features are not enabled */
+body:not(.accessibility-enhanced) .skip-to-main {
+  display: none;
+}
+
+/**
+ * Touch Target Sizes and Spacing
+ * WCAG 2.5.5 Target Size (Level AAA) - 44x44 pixels minimum
+ * Enabled when Voice Guide OR Simplified Navigation is active
+ * 
+ * IMPORTANT: These rules ensure all interactive elements are:
+ * - At least 44x44 pixels (minimum touch target size)
+ * - Have 8px spacing between them (prevents accidental presses)
+ */
+@layer utilities {
+  /* Ensure all interactive elements meet minimum touch target size */
+  .accessibility-enhanced button,
+  .accessibility-enhanced [role="button"],
+  .accessibility-enhanced a,
+  .accessibility-enhanced input[type="button"],
+  .accessibility-enhanced input[type="submit"],
+  .accessibility-enhanced input[type="reset"] {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.625rem 1rem; /* 10px 16px */
+  }
+
+  /* Ensure form inputs meet minimum height */
+  .accessibility-enhanced input[type="text"],
+  .accessibility-enhanced input[type="email"],
+  .accessibility-enhanced input[type="tel"],
+  .accessibility-enhanced input[type="password"],
+  .accessibility-enhanced input[type="number"],
+  .accessibility-enhanced input[type="search"],
+  .accessibility-enhanced textarea,
+  .accessibility-enhanced select {
+    min-height: 44px;
+    padding: 0.625rem 1rem;
+  }
+
+  /* Radio buttons and checkboxes - ensure clickable area is 44x44 */
+  .accessibility-enhanced input[type="radio"],
+  .accessibility-enhanced input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    /* Padding creates the 44x44 touch target */
+    padding: 10px;
+  }
+
+  /* Custom radio/checkbox elements */
+  .accessibility-enhanced [role="radio"],
+  .accessibility-enhanced [role="checkbox"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Icon-only buttons need minimum size */
+  .accessibility-enhanced button:not(:has(span:not([class*="icon"]))),
+  .accessibility-enhanced [role="button"]:not(:has(span:not([class*="icon"]))) {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.625rem;
+  }
+
+  /* Spacing between interactive elements - 8px minimum */
+  .accessibility-enhanced button + button,
+  .accessibility-enhanced button + a,
+  .accessibility-enhanced a + button,
+  .accessibility-enhanced a + a,
+  .accessibility-enhanced [role="button"] + [role="button"],
+  .accessibility-enhanced [role="button"] + button,
+  .accessibility-enhanced button + [role="button"] {
+    margin-left: 8px;
+  }
+
+  /* Vertical spacing for stacked elements */
+  .accessibility-enhanced button:not(:last-child),
+  .accessibility-enhanced a:not(:last-child),
+  .accessibility-enhanced [role="button"]:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  /* Grid/Flex layouts - ensure gap between items */
+  .accessibility-enhanced nav,
+  .accessibility-enhanced [role="navigation"],
+  .accessibility-enhanced [role="menu"],
+  .accessibility-enhanced [role="menubar"] {
+    gap: 8px;
+  }
+
+  /* List items with interactive elements */
+  .accessibility-enhanced li:has(button),
+  .accessibility-enhanced li:has(a),
+  .accessibility-enhanced li:has([role="button"]) {
+    margin-bottom: 8px;
+  }
+
+  /* Form field spacing */
+  .accessibility-enhanced form > *:not(:last-child),
+  .accessibility-enhanced fieldset > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  /* Cards and clickable containers */
+  .accessibility-enhanced [role="button"]:has(div),
+  .accessibility-enhanced button:has(div) {
+    min-height: 44px;
+    padding: 0.625rem;
+  }
+
+  /* Navigation items (bottom nav bar, etc.) */
+  .accessibility-enhanced nav button,
+  .accessibility-enhanced nav a {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+  }
+
+  /* Tab elements */
+  .accessibility-enhanced [role="tab"] {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.625rem 1rem;
+  }
+
+  /* Menu items */
+  .accessibility-enhanced [role="menuitem"] {
+    min-height: 44px;
+    padding: 0.625rem 1rem;
+  }
+
+  /* Switch/Toggle elements */
+  .accessibility-enhanced [role="switch"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Ensure flexbox containers respect spacing */
+  .accessibility-enhanced [class*="flex"]:has(button),
+  .accessibility-enhanced [class*="flex"]:has(a),
+  .accessibility-enhanced [class*="flex"]:has([role="button"]) {
+    gap: 8px;
+  }
+
+  /* Grid containers */
+  .accessibility-enhanced [class*="grid"]:has(button),
+  .accessibility-enhanced [class*="grid"]:has(a),
+  .accessibility-enhanced [class*="grid"]:has([role="button"]) {
+    gap: 8px;
+  }
+}
+
+/**
+ * High Contrast Mode - Maintain touch targets
+ */
+.high-contrast.accessibility-enhanced button,
+.high-contrast.accessibility-enhanced [role="button"],
+.high-contrast.accessibility-enhanced a {
+  min-width: 44px;
+  min-height: 44px;
+  border: 3px solid var(--border);
+}
+
+/**
+ * Dark Mode - Maintain touch targets
+ */
+.dark.accessibility-enhanced button,
+.dark.accessibility-enhanced [role="button"],
+.dark.accessibility-enhanced a {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/**
+ * Accessible Toast Notifications
+ * Enhanced visibility and persistence for users with visual and cognitive disabilities
+ * 
+ * Features:
+ * - Larger size in accessibility mode
+ * - Higher contrast borders
+ * - Longer animation duration
+ * - Prominent positioning
+ * - Clear visual hierarchy
+ */
+
+/* Regular toast styling */
+[data-sonner-toast] {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced toast styling when accessibility features are enabled */
+.accessibility-enhanced [data-sonner-toast] {
+  border: 3px solid var(--border);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  min-height: 60px;
+  padding: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Success toasts */
+.accessibility-enhanced [data-sonner-toast][data-type="success"] {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.dark.accessibility-enhanced [data-sonner-toast][data-type="success"] {
+  background: #064e3b;
+  border-color: #10b981;
+}
+
+/* Error toasts */
+.accessibility-enhanced [data-sonner-toast][data-type="error"] {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.dark.accessibility-enhanced [data-sonner-toast][data-type="error"] {
+  background: #7f1d1d;
+  border-color: #ef4444;
+}
+
+/* Warning toasts */
+.accessibility-enhanced [data-sonner-toast][data-type="warning"] {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.dark.accessibility-enhanced [data-sonner-toast][data-type="warning"] {
+  background: #78350f;
+  border-color: #f59e0b;
+}
+
+/* Info toasts */
+.accessibility-enhanced [data-sonner-toast][data-type="info"] {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.dark.accessibility-enhanced [data-sonner-toast][data-type="info"] {
+  background: #1e3a8a;
+  border-color: #3b82f6;
+}
+
+/* High contrast mode - even more prominent */
+.high-contrast [data-sonner-toast] {
+  border: 4px solid #000;
+  font-weight: 600;
+}
+
+.high-contrast.dark [data-sonner-toast] {
+  border-color: #fff;
+}
+
+/* Toast title and description */
+.accessibility-enhanced [data-sonner-toast] [data-title] {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.accessibility-enhanced [data-sonner-toast] [data-description] {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Toast close button */
+.accessibility-enhanced [data-sonner-toast] [data-close-button] {
+  min-width: 32px;
+  min-height: 32px;
+  border: 2px solid currentColor;
+  border-radius: 0.5rem;
+}
+
+.accessibility-enhanced [data-sonner-toast] [data-close-button]:focus-visible {
+  outline: 4px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Toaster container positioning for better visibility */
+.accessibility-enhanced [data-sonner-toaster] {
+  /* Move toasts slightly lower to avoid header overlap */
+  top: 80px !important;
+}
+
+/* Important toasts - extra prominence */
+.accessibility-enhanced [data-sonner-toast][data-important="true"] {
+  border-width: 4px;
+  animation: toast-pulse 2s ease-in-out infinite;
+}
+
+@keyframes toast-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+}
